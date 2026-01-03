@@ -200,6 +200,6 @@
   }
 
   .gradient-hero {
-    background: var(--gradient-hero);
+    background-image: var(--gradient-hero);
   }
 }

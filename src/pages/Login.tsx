@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/common/Logo";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft } from "lucide-react";
@@ -15,11 +16,8 @@ const Login = () => {
             Back to home
           </Link>
 
-          <div className="flex items-center gap-2 mb-8">
-            <div className="w-10 h-10 rounded-lg gradient-hero flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">RP</span>
-            </div>
-            <span className="font-semibold text-xl text-foreground">RecruitPro</span>
+          <div className="mb-8">
+            <Logo />
           </div>
 
           <h1 className="text-3xl font-bold text-foreground">Welcome back</h1>
@@ -30,9 +28,9 @@ const Login = () => {
           <form className="mt-8 space-y-6">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input 
-                id="email" 
-                type="email" 
+              <Input
+                id="email"
+                type="email"
                 placeholder="you@example.com"
                 className="h-11"
               />
@@ -45,9 +43,9 @@ const Login = () => {
                   Forgot password?
                 </Link>
               </div>
-              <Input 
-                id="password" 
-                type="password" 
+              <Input
+                id="password"
+                type="password"
                 placeholder="••••••••"
                 className="h-11"
               />
@@ -96,8 +94,8 @@ const Login = () => {
         <div className="max-w-md text-primary-foreground text-center">
           <h2 className="text-3xl font-bold">Find Your Perfect Match</h2>
           <p className="mt-4 text-primary-foreground/90">
-            Whether you're looking for your dream job or the perfect candidate, 
-            RecruitPro makes the connection seamless.
+            Whether you're looking for your dream job or the perfect candidate,
+            VentureMond makes the connection seamless.
           </p>
         </div>
       </div>

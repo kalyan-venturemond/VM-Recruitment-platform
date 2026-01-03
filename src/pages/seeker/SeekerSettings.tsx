@@ -9,8 +9,8 @@ import { Separator } from "@/components/ui/separator";
 const SeekerSettings = () => {
   return (
     <SeekerLayout>
-      <PageHeader 
-        title="Settings" 
+      <PageHeader
+        title="Settings"
         description="Manage your account settings and preferences"
       />
 
@@ -66,7 +66,7 @@ const SeekerSettings = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="font-medium text-foreground">Marketing Emails</p>
-                <p className="text-sm text-muted-foreground">Receive tips and updates from RecruitPro</p>
+                <p className="text-sm text-muted-foreground">Receive tips and updates from VentureMond</p>
               </div>
               <Switch />
             </div>

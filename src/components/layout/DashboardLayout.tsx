@@ -1,14 +1,15 @@
 import { ReactNode, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/common/Logo";
 import { Button } from "@/components/ui/button";
-import { 
-  Menu, 
-  X, 
-  Bell, 
+import {
+  Menu,
+  X,
+  Bell,
   User,
   LogOut,
-  ChevronDown 
+  ChevronDown
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -31,11 +32,11 @@ interface DashboardLayoutProps {
   userName: string;
 }
 
-export function DashboardLayout({ 
-  children, 
-  navItems, 
+export function DashboardLayout({
+  children,
+  navItems,
   userRole,
-  userName 
+  userName
 }: DashboardLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
@@ -44,7 +45,7 @@ export function DashboardLayout({
     <div className="min-h-screen bg-background">
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-foreground/50 z-40 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
@@ -58,13 +59,10 @@ export function DashboardLayout({
         <div className="flex flex-col h-full">
           {/* Logo */}
           <div className="flex items-center justify-between h-16 px-6 border-b border-sidebar-border">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg gradient-hero flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">RP</span>
-              </div>
-              <span className="font-semibold text-sidebar-foreground">RecruitPro</span>
+            <Link to="/">
+              <Logo />
             </Link>
-            <button 
+            <button
               onClick={() => setSidebarOpen(false)}
               className="lg:hidden text-sidebar-foreground"
             >
@@ -123,7 +121,7 @@ export function DashboardLayout({
         {/* Top navbar */}
         <header className="sticky top-0 z-30 h-16 bg-card border-b border-border">
           <div className="flex items-center justify-between h-full px-4 lg:px-8">
-            <button 
+            <button
               onClick={() => setSidebarOpen(true)}
               className="lg:hidden p-2 rounded-lg hover:bg-muted"
             >

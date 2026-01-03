@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { 
-  Briefcase, 
-  Users, 
-  Building2, 
+import { Logo } from "@/components/common/Logo";
+import {
+  Briefcase,
+  Users,
+  Building2,
   ArrowRight,
   CheckCircle2,
   Search,
@@ -43,10 +44,7 @@ const Landing = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg gradient-hero flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">RP</span>
-            </div>
-            <span className="font-semibold text-foreground">RecruitPro</span>
+            <Logo />
           </Link>
           <div className="flex items-center gap-3">
             <Link to="/login">
@@ -69,7 +67,7 @@ const Landing = () => {
             </span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            The modern recruitment platform that connects talented professionals with 
+            The modern recruitment platform that connects talented professionals with
             innovative companies. Start your journey today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
@@ -107,7 +105,7 @@ const Landing = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Why Choose RecruitPro?
+              Why Choose VentureMond?
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Everything you need to succeed in your job search or hiring process.
@@ -194,7 +192,7 @@ const Landing = () => {
               Ready to Get Started?
             </h2>
             <p className="text-primary-foreground/90 mt-4 max-w-xl mx-auto">
-              Join thousands of professionals and companies already using RecruitPro.
+              Join thousands of professionals and companies already using VentureMond.
             </p>
             <Link to="/signup" className="inline-block mt-8">
               <Button variant="secondary" size="xl">
@@ -208,7 +206,7 @@ const Landing = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>© 2024 RecruitPro. All rights reserved.</p>
+          <p>© 2024 VentureMond. All rights reserved.</p>
         </div>
       </footer>
     </div>

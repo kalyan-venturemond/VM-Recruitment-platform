@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/common/Logo";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, Mail } from "lucide-react";
@@ -13,11 +14,8 @@ const ForgotPassword = () => {
           Back to login
         </Link>
 
-        <div className="flex items-center gap-2 mb-8">
-          <div className="w-10 h-10 rounded-lg gradient-hero flex items-center justify-center">
-            <span className="text-primary-foreground font-bold">RP</span>
-          </div>
-          <span className="font-semibold text-xl text-foreground">RecruitPro</span>
+        <div className="mb-8">
+          <Logo />
         </div>
 
         <div className="stat-card">
@@ -35,9 +33,9 @@ const ForgotPassword = () => {
           <form className="mt-8 space-y-6">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input 
-                id="email" 
-                type="email" 
+              <Input
+                id="email"
+                type="email"
                 placeholder="you@example.com"
                 className="h-11"
               />
