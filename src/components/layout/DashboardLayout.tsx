@@ -1,7 +1,6 @@
 import { ReactNode, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Logo } from "@/components/common/Logo";
 import { Button } from "@/components/ui/button";
 import {
   Menu,
@@ -60,7 +59,11 @@ export function DashboardLayout({
           {/* Logo */}
           <div className="flex items-center justify-between h-16 px-6 border-b border-sidebar-border">
             <Link to="/">
-              <Logo />
+              <img
+                src="/logo_accent (2).png"
+                alt="VentureMond"
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <button
               onClick={() => setSidebarOpen(false)}
