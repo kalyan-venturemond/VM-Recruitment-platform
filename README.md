@@ -1,7 +1,7 @@
-# RecruitPro - Talent Connection Hub
+# Venturemond Recruitment Platform - Talent Connection Hub
 
 ## Project Overview
-RecruitPro is a modern recruitment platform connecting talented professionals with innovative companies.
+Venturemond Recruitment Platform is a modern recruitment platform connecting talented professionals with innovative companies.
 
 ## Features
 - **Job Seekers**: Create profiles, search jobs, apply, and track applications.
