@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/common/Logo";
 import { Input } from "@/components/ui/input";
@@ -6,6 +6,14 @@ import { Label } from "@/components/ui/label";
 import { ArrowLeft } from "lucide-react";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TEMP / DUMMY AUTH FLOW
+    navigate("/seeker/dashboard");
+  };
+
   return (
     <div className="min-h-screen bg-background flex">
       {/* Left side - Form */}
@@ -25,7 +33,7 @@ const Login = () => {
             Sign in to your account to continue
           </p>
 
-          <form className="mt-8 space-y-6">
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input

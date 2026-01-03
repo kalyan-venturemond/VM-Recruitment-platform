@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/common/Logo";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,17 @@ import { useState } from "react";
 
 const Signup = () => {
   const [role, setRole] = useState("seeker");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TEMP / DUMMY AUTH FLOW
+    if (role === "employer") {
+      navigate("/employer/dashboard");
+    } else {
+      navigate("/seeker/dashboard");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background flex">
@@ -29,7 +40,7 @@ const Signup = () => {
             Get started with VentureMond today
           </p>
 
-          <form className="mt-8 space-y-6">
+          <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
               <Input
